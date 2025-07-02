@@ -1,0 +1,79 @@
+ When to Use GenericServlet vs HttpServlet
+Feature	              GenericServlet	                            HttpServlet
+
+Protocol	          Generic (any protocol)	                  HTTP-specific (GET, POST, PUT, DELETE)
+Common Use Case	      Rare, custom servlet container	         Most common for web apps (Tomcat, Jetty)
+Method to Override	   service()	                              doGet(), doPost()
+Used for Web Forms?	    ❌ Not preferred	                     ✅ Best choice
+
+
+
+Complete Workflow:
+
+User Opens HTML Form →
+Fills username →
+Clicks Submit →
+Browser sends POST request to /test →
+Servlet receives it →
+Servlet reads uname →
+Servlet builds response HTML →
+Browser displays response
+
+
+ if dont write index.html file
+
+http://localhost:8082/FirstServletProject/test?uname=Subhamoy
+
+
+
+ What is Maven?
+✅ Maven is a Build Automation Tool used for:
+Managing Dependencies – Automatically downloads required libraries (like JDBC, Servlet API, etc.) from the internet (Maven Central).
+Building Projects – Compiles Java code, runs tests, packages your project into .jar or .war files.
+Project Structure Management – Follows a standard folder structure (src/main/java, src/main/webapp, etc.).
+Simplifies Project Setup – Uses a file called pom.xml to manage the entire project configuration.
+
+🔧 In Web Projects:
+You include servlet/JSP dependencies in pom.xml.
+Maven downloads them for you.
+It helps create .war file to deploy on Tomcat.
+
+
+🧱 What is Tomcat?
+✅ Tomcat is a Web Server + Servlet Container:
+Runs your Java web applications (Servlets, JSP).
+
+Listens to browser requests (like http://localhost:8080) and passes them to your servlets.
+Executes the servlet code and sends the HTML response back to the browser.
+Handles HTTP protocol, sessions, and form submission.
+
+
+🧩 How Maven and Tomcat Work Together in a Web App:
+🌐 Full Flow:
+You create a Maven Web Project using the archetype maven-archetype-webapp.
+You write your Java classes (Servlets) and HTML/JSP pages.
+You add servlet dependencies (like jakarta.servlet-api) in pom.xml.
+
+Maven:
+Downloads the required JARs.
+Compiles your project.
+Packages it into a .war file inside target/.
+
+
+Tomcat:
+You deploy the .war file to the webapps/ folder of Tomcat, or configure Tomcat in IntelliJ.
+Tomcat loads the .war, maps the URLs (@WebServlet("/login")), and serves requests from the browser.
+
+Detects the .war
+Unpacks it
+Initializes everything inside it
+Serves it as a running web app
+
+💡 Example:
+You type: http://localhost:8080/myapp/test
+
+Tomcat receives the request.
+It finds the servlet mapped with /test.
+Executes the servlet.
+Sends the HTML response back to the browser.
+1

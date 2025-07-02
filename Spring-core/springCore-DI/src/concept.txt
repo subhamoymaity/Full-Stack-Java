@@ -1,0 +1,93 @@
+
+
+💉 1. What is IoC (Inversion of Control)?
+🌟 IoC is a principle where control of object creation and dependency management is transferred from the
+developer to the framework (like Spring).
+example:
+In Java: Instead of doing this manually:
+Car car = new Car(new Engine());
+Spring will manage this automatically.
+
+
+💉 2. What is Dependency Injection (DI)?
+🌟 DI is a design pattern used to implement IoC, where the dependencies are injected (provided) by the framework instead of the class creating them.
+
+🔧 Types of DI in Spring:
+Constructor DI	Dependencies are passed via constructor
+Setter DI	Dependencies are set via setter method
+Field DI	Dependencies injected directly into fields (with @Autowired)
+
+
+💉 3. What is IoC Container? (The Spring engine room )⚙️ ---  Mnemonic
+
+🌟 The IoC Container is the core part of Spring that manages
+Bean creation
+Bean lifecycle
+Bean injection
+
+🔥 Main IoC Containers in Spring:
+    BeanFactory	     Basic container (lazy loading)
+    ApplicationContext	    Advanced container (eager loading, more features)
+
+🔥 Difference Between BeanFactory and ApplicationContext
+Feature	              BeanFactory	                                          ApplicationContext
+Lazy Initialization	  ✅ Yes (creates bean on demand)	            ❌ No (creates all singleton beans at start)
+Advanced Features	  ❌ No	                                        ✅ Yes (AOP, Events, i18n, etc.)
+Use Case	           Lightweight apps, testing	                Most common in real-world apps
+
+💡singleton: Only one object (instance) of that bean is created in the entire Spring container —
+    no matter how many times you call getBean() for it.
+    advantage : Saves memory and reduces object creation overhead.
+
+In Spring Boot, we mostly use:
+ApplicationContext context = SpringApplication.run(App.class, args);
+
+ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");  also in spring
+
+
+
+💉 What actually is a Bean in Spring?
+A Spring Bean is just a Java object that is managed by the Spring IoC container.
+
+So, when you tell Spring about a class (via bean.xml, @Component, @Bean, etc.), Spring:
+
+Creates an object (instantiates it)
+Manages its lifecycle (creation, initialization, destruction)
+Injects its dependencies (via constructor, setter, or field)
+Gives it to you when needed
+
+🔁 Summary of Flow:
+Spring creates the petrolEngine bean
+It creates the car bean
+It injects petrolEngine into car via setEngine()
+You fetch car from Spring and call car.drive()
+
+
+
+You typically use one of these attributes in 🔁  <constructor-arg>:
+
+Attribute	    Use Case Example
+ref	            Reference to another bean
+value	        Pass literal values (String, int, etc.)
+index	        Specify position of argument (e.g., 0, 1, ...)
+type	        Specify argument type (e.g., org.example.IEngine)
+name	        (Less common, requires compiler to retain names)
+
+<constructor-arg index="0" ref="petrol" />
+<!-- OR -->
+<constructor-arg type="org.example.IEngine" ref="petrol" />
+
+
+
+💉 What is a Bean Scope?
+In Spring, when you define a bean, Spring decides:
+❓ "How many objects (instances) of this bean should I create?"
+This decision is controlled by Bean Scope.
+
+🔁 Types of Bean Scopes (For Spring Core - Standalone App)
+1. singleton	    Only one object per Spring container (default)
+2. prototype	    Creates a new object every time it is requested
+3. request (Spring MVC/Web Only)
+4. session (Spring MVC/Web Only)
+
+Interview Question--- types of bean scope and difference b/w singleton & prototype .
