@@ -27,7 +27,6 @@ public class TruckService {
       }
    }
 
-
    public Truck getTruckById(int id){
       String sql="select * from truck where id=?";
       Truck truck=new Truck();
@@ -52,25 +51,26 @@ public class TruckService {
    }
 
 
-   public void updateTruck(Truck truck){
-      String spl="update truck set name=?, model=?, capacity=?, driver_name=? where id =?";
+   public void updateTruck(Truck truck) {
+      String sql = "update truck set name=?, model=?, capacity=?, driver_name=? where id = ?";
 
-      try{
-         Connection connection=ConnectionDetails.getConnection();
-         PreparedStatement preparedStatement=connection.prepareStatement(spl);
-         preparedStatement.setString(1,truck.getName());
-         preparedStatement.setString(2,truck.getModel());
-         preparedStatement.setInt(3,truck.getCapacity());
-         preparedStatement.setString(4,truck.getDriverName());
-         preparedStatement.setInt(5,truck.getId());
+      try {
+         Connection connection = ConnectionDetails.getConnection();
+         PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-         int update=preparedStatement.executeUpdate();
-         System.out.println("Row inserted: "+update);
-      }
-      catch(Exception e){
+         preparedStatement.setString(1, truck.getName());
+         preparedStatement.setString(2, truck.getModel());
+         preparedStatement.setInt(3, truck.getCapacity());
+         preparedStatement.setString(4, truck.getDriverName());
+         preparedStatement.setInt(5, truck.getId());
+
+         int update = preparedStatement.executeUpdate();
+         System.out.println("Row updated: " + update);
+      } catch (Exception e) {
          e.printStackTrace();
       }
    }
+
 
    public  List<Truck> getAllTrucks()
    {

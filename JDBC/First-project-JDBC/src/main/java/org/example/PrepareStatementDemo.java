@@ -46,3 +46,5 @@ public class PrepareStatementDemo{
       }
    }
 }
+
+//  Try Scanner in your own

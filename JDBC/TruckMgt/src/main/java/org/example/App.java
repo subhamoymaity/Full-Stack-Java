@@ -29,6 +29,7 @@ public class App
             System.out.println("4. Get All Trucks");
             System.out.println("5. Delete Truck by ID");
             System.out.println("6. Exit");
+
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
