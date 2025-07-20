@@ -58,6 +58,7 @@ public class Truck {
       this.driverName = driverName;
    }
 
+
    @Override
    public String toString() {
       return "Truck{" +
@@ -69,3 +70,5 @@ public class Truck {
                     '}';
    }
 }
+
+//commited
