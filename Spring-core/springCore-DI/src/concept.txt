@@ -44,7 +44,12 @@ ApplicationContext context = SpringApplication.run(App.class, args);
 
 ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");  also in spring
 
+ApplicationContext	                IoC container interface (super powerful, advanced)
+ClassPathXmlApplicationContext	    Implementation class of ApplicationContext
+"Beans.xml"	                        Path of your Spring config XML file (bean definitions)
 
+->  In Spring, the IoC container creates and injects objects by reading the bean.xml file —
+the injection is handled by the Spring Framework, not manually by the developer. ✅
 
 💉 What actually is a Bean in Spring?
 A Spring Bean is just a Java object that is managed by the Spring IoC container.

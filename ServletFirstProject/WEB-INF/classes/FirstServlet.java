@@ -19,3 +19,6 @@ public class FirstServlet extends GenericServlet {
         // Cleanup code (if needed)
     }
 }
+
+
+//jar cvf first.war .
