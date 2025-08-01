@@ -8,11 +8,16 @@
     <!-- Define beans here -->
     <bean id="petrol" class="org.example.PetrolEngine"/>
     <bean id="diesel" class="org.example.DieselEngine"/>
+<!--    <bean id="diesel" class="org.example.DieselEngine" autowire-candidate="false"/>-->
     <bean id="car" class="org.example.Car" scope="prototype">
         <property name="engine" ref="petrol"/>
 <!--        <constructor-arg ref="petrol"/>  if use Constructor Injection-->
 <!--        Use annotations only  if use field injection   @Autowired)  in Car class Over (IEngine engine;) line  & @Component over Car class-->
-<!--        <bean id="car" class="org.example.Car" autowire="byName"/>   // if cade of autowire  and pass id="engine"  in petrolEngine-->
+<!--        <bean id="car" class="org.example.Car" autowire="byName"/>
+            <bean id="car" class="org.example.Car" autowire="constructor"/>
+        // if case of autowire  and pass id="engine"  in petrolEngine . then reference variable of  target class(Car) = engine is same it will work
+        -->
+
     </bean>
 </beans>
 

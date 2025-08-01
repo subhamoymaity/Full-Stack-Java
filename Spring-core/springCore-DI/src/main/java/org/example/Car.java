@@ -6,6 +6,13 @@ public class Car {
 Car(){
    System.out.println("car constructor...");
 }
+/*
+ if use constructor injection , create a constructor engine here
+Car(IEngine engine){
+   this.engine=engine;
+}
+*/
+
    public void setEngine(IEngine engine) {
       System.out.println("calling setter method...");
       this.engine = engine;

@@ -38,7 +38,7 @@ Use Case	           Lightweight apps, testing	                Most common in rea
 💡singleton: Only one object (instance) of that bean is created in the entire Spring container —
     no matter how many times you call getBean() for it.
     advantage : Saves memory and reduces object creation overhead.
-
+💡Singleton : create one object for multiple request.
 In Spring Boot, we mostly use:
 ApplicationContext context = SpringApplication.run(App.class, args);
 

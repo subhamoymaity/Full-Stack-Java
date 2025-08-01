@@ -16,6 +16,8 @@ public class TinderController {
    PersonService personService;
 
    @GetMapping("/getPersons")
+   // @getMapping don't do serialization , it maps the method with http(Postman) get method
+   //serialization  is done by SpringBoot
    public List<Person> getAllPerson(){
       List<Person> allPersonData = personService.getAllPersonData();
       List<Person> filterData = personService.filterDataBasedOnGen(allPersonData);
@@ -23,6 +25,7 @@ public class TinderController {
    }
   @PostMapping("/create-person")
    public Person createUser(@RequestBody Person person){
+      //@RequestBody tells that take Jason data and converts it in java object
       return person;
    }
 
