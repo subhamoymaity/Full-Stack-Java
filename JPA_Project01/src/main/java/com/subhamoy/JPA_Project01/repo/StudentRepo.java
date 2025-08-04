@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface StudentRepo extends JpaRepository<Student,Integer> {
 //   List<Student> findByName(String name);
 //   List<Student> findByAgeGreaterThan(int age);
-
+//
 }
