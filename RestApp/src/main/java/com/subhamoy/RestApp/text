@@ -10,3 +10,4 @@ serialization  is done by SpringBoot.
 and the Json will come by @postMapping   annotation
 
  @postMapping maps the method with http post method
+
