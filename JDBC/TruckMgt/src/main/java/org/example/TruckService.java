@@ -12,7 +12,7 @@ public class TruckService {
       String spl="insert into truck (name,model,capacity,driver_name) values (?,?,?,?);";
 
       try{
-         Connection connection=ConnectionDetails.getConnection();
+         Connection connection=ConnectionDeta                                                 ils.getConnection();
          PreparedStatement preparedStatement=connection.prepareStatement(spl);
          preparedStatement.setString(1,truck.getName());
          preparedStatement.setString(2,truck.getModel());
