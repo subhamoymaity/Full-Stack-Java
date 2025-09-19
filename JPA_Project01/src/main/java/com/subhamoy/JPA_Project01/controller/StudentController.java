@@ -31,4 +31,22 @@ public class StudentController {
    }
 
    //3rd API
+//   @GetMapping("/{id}")
+//   public Student getStudentById(@PathVariable Integer id) {
+//      return service.getStudentById(id);
+//   }
+
+   @GetMapping
+   public Student getStudentById(@RequestParam Integer id) {
+      return service.getStudentById(id);
+   }
+
+   @PutMapping("/{id}")
+   public  Student updateStudent(@PathVariable Integer id , @RequestBody Student student){
+      Student updateStudent = service.updateStudent(id, student);
+      return  updateStudent;
+   }
+
+//   Homework - @DeleteMapping , @PatchMapping
+   // How to write custom query in JPA
 }

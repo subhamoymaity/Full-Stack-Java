@@ -1,1 +1,7 @@
-..
+
+
+why we write this line ?
+public interface StudentRepo extends JpaRepository<Student,Integer>
+
+ans-  we knoe Jpa is a interface . JpaRepository it gives the implementation of
+      Student class in runtime

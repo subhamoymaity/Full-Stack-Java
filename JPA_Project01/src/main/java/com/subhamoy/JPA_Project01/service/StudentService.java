@@ -33,8 +33,7 @@ public class StudentService {
    public Student updateStudent(Integer id,Student student) {
       Optional<Student> studentById = studentRepo.findById(id);
       Student stud = null;
-      if(studentById.isPresent())
-      {
+      if(studentById.isPresent()) {
          Student dbStudentObject = studentById.get();
          dbStudentObject.setAge(student.getAge());
          dbStudentObject.setEmail(student.getEmail());
