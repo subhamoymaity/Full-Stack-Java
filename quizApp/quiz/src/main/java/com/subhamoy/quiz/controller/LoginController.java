@@ -4,39 +4,42 @@ import com.subhamoy.quiz.dto.LoginRequest;
 import com.subhamoy.quiz.entity.QuizQuestion;
 import com.subhamoy.quiz.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RestController
 @RequestMapping("/api")
 public class LoginController {
 
-
    @Autowired
-   QuestionService questionService;
+   private QuestionService questionService;
 
-   // Hardcoded credentials for now
-   private final String USERNAME = "user";
-   private final String PASSWORD = "password";
+   // Simple hardcoded credentials for demo purposes
+   private static final String USERNAME = "user";
+   private static final String PASSWORD = "password";
 
    @PostMapping("/login")
-   public String login(@RequestBody LoginRequest loginRequest) {
+   public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
       if (USERNAME.equals(loginRequest.getUsername()) && PASSWORD.equals(loginRequest.getPassword())) {
-         return "Login Successful!";
+         return ResponseEntity.ok("Login Successful!");
       } else {
-         return "Invalid username or password";
+         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
       }
    }
+
    @GetMapping("/questions")
-   public List<QuizQuestion> getQuestions() {
-      return questionService.getAllQuestions();
+   public ResponseEntity<List<QuizQuestion>> getQuestions() {
+      List<QuizQuestion> questions = questionService.getAllQuestions();
+      return ResponseEntity.ok(questions);
    }
 
-   @PostMapping(value = "/save", consumes = "application/json", produces = "application/json")
-   public QuizQuestion saveQuestion(@RequestBody QuizQuestion question) {
-      return questionService.saveQuestion(question);
+   @PostMapping(value = "/questions", consumes = "application/json", produces = "application/json")
+   public ResponseEntity<QuizQuestion> saveQuestion(@RequestBody QuizQuestion question) {
+      QuizQuestion saved = questionService.saveQuestion(question);
+      return ResponseEntity.status(HttpStatus.CREATED).body(saved);
    }
-
 }
