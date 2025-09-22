@@ -7,6 +7,7 @@ let totalQuestions = 0; // This will be set dynamically based on the API respons
 async function fetchQuestions() {
     try {
         const response = await fetch('http://localhost:8080/api/questions'); // API URL
+        
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
