@@ -28,7 +28,7 @@ public class FindMyTrainApp {
       station1.setPlatformList(platformList);
 
       Schedule s1=new Schedule(train1,station1,"8AM","10AM",p1);
-      Schedule s2=new Schedule(train1,station1,"9AM","11AM",p1);
+      Schedule s2=new Schedule(train1,station1,"9AM","11AM",p2);
 
       system.addStations(station1);
       system.addStations(station2);
@@ -57,6 +57,6 @@ public class FindMyTrainApp {
          System.out.println(schedule);
       }
 
-      System.out.println(myTrains.get(0));
+//      System.out.println(myTrains.get(0));
    }
 }

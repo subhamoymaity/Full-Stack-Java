@@ -1,0 +1,30 @@
+1️⃣ What does wait() REALLY mean?
+It means:
+“I will give up this object’s lock and wait until someone tells me to continue.”
+
+So wait() = release lock + pause
+
+2️⃣ What is synchronized (b) doing?
+synchronized (b) {
+   // code
+}
+This means:
+
+“Before entering, I must take the lock of object b.”
+Only one thread can hold that lock at a time.
+
+
+
+Very Simple Real-Life Example 🚪
+
+Imagine:
+b = a room
+Lock = key of the room
+synchronized(b) = you enter the room and take the key
+wait() = you put the key on the table and sit inside waiting
+❓ Can you put the key back if you never took it?
+👉 NO
+
+That’s why:
+You must enter the room first (synchronized)
+Then you can put the key down (wait())

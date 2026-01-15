@@ -27,7 +27,8 @@ class ThreadB extends Thread{
             total=total+i;
          }
          System.out.println("child thread giving notification call");
-         this.notify(); ///this.notifyAll()
+         this.notify(); //this.notifyAll()
+         System.out.println("child thread have been blocked , tell main to release the lock");
       }
    }
 }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="decebcb4-9802-4686-9dd7-f3da5c5cbc51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ClounterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ClounterTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/Counter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/CounterThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/CounterThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/PriorityDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/PriorityDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/PriorityTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/PriorityTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ThreadB.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ThreadB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ThreadDemo2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/.idea/out/production/Core_java/Spark2_0/Multithreading/ThreadDemo2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/FindMyTrain/FindMyTrainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/FindMyTrain/FindMyTrainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/FindMyTrain/TrainSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/FindMyTrain/TrainSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/Multithreading/ClounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/Multithreading/ClounterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/Multithreading/PriorityDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/Multithreading/PriorityDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/Multithreading/ThreadA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/Multithreading/ThreadA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Core_java/Multithreading/ThreadDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Core_java/Multithreading/ThreadDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/First-project-JDBC/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/First-project-JDBC/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TruckMgt/src/main/java/org/example/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TruckMgt/src/main/java/org/example/TruckService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;assignee&quot;: &quot;subhamoym600&quot;
+    },
+    {
+      &quot;assignee&quot;: &quot;subhamoymaity&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/subhamoymaity/Full-Stack-Java.git&quot;,
+    &quot;accountId&quot;: &quot;8d8e378a-dfba-4fb8-ba08-5867d26969e0&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2uQE20X1YJZ7yJxSUdKsTUVZI26" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.DeleteDemo.executor": "Run",
+    "Application.Unnamed.executor": "Debug",
+    "Maven.First-project-JDBC [clean,compile,verify...].executor": "Run",
+    "Maven.First-project-JDBC [clean,install].executor": "Run",
+    "Maven.First-project-JDBC [clean,test,install].executor": "Run",
+    "Maven.First-project-JDBC [clean,validate,test...].executor": "Run",
+    "Maven.First-project-JDBC [clean,validate...].executor": "Run",
+    "Maven.First-project-JDBC [clean].executor": "Run",
+    "Maven.First-project-JDBC [compile].executor": "Run",
+    "Maven.First-project-JDBC [install].executor": "Run",
+    "Maven.First-project-JDBC [test,install].executor": "Run",
+    "Maven.First-project-JDBC.executor": "Run",
+    "Maven.TruckMgt.executor": "Run",
+    "Maven.Unknown [clean,install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Full-Stack-Java/Servlet",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <classpathModifications>
+        <entry path="D:\Full-Stack-Java\JDBC\First-project-JDBC\target\classes" />
+      </classpathModifications>
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="First-project-JDBC" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/First-project-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeleteDemo" />
+      <module name="First-project-JDBC" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/First-project-JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="First-project-JDBC" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/First-project-JDBC" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="TruckMgt" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/TruckMgt" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.DeleteDemo" />
+      <item itemvalue="Maven.First-project-JDBC" />
+      <item itemvalue="Maven.TruckMgt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DeleteDemo" />
+        <item itemvalue="Maven.TruckMgt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="decebcb4-9802-4686-9dd7-f3da5c5cbc51" name="Changes" comment="" />
+      <created>1742172187057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742172187057</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JDBC$App.ic" NAME="App Coverage Results" MODIFIED="1752887726062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
+  </component>
+</project>

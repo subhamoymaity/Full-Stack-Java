@@ -5,6 +5,7 @@ public class FirstServlet extends GenericServlet {
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         PrintWriter pw = res.getWriter();  
+//✅ It is used to send a response BACK to the client.
         pw.println("Hello Subhamoy");
         pw.close();
     }
@@ -20,5 +21,5 @@ public class FirstServlet extends GenericServlet {
     }
 }
 
-
 //jar cvf first.war .
+//PS D:\Full-Stack-Java\ServletFirstProject> jar cvf first.war .

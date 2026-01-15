@@ -18,11 +18,11 @@ public class TrainSystem {
    public void  addSchedule(Schedule schedule){
       schedules.add(schedule);
    }
-   public List<Schedule> findMyTrains(String startStationID,String endStationID){
+   public List<Schedule> findMyTrains(String startStationName,String endStationName){
       List<Schedule> res=new ArrayList<>();
       for(Schedule schedule:schedules){
-         if(schedule.getStation().getStationID().equals(startStationID) ||
-                   schedule.getStation().getStationID().equals(endStationID)){
+         if(schedule.getStation().getStationName().equals(startStationName) ||
+                   schedule.getStation().getStationName().equals(endStationName)){
             res.add(schedule);
          }
       }

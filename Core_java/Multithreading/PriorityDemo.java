@@ -7,6 +7,7 @@ class PriorityTest implements  Runnable{
       for (int i=0;i<5;i++)
       {
          System.out.println(Thread.currentThread());
+
       }
    }
 }
@@ -18,14 +19,15 @@ public class PriorityDemo {
       System.out.println("t1 ki priority = "+t1.getPriority());
       System.out.println("t2 ki priority = "+t2.getPriority());
 
-      //t1.setPriority(Thread.MIN_PRIORITY);
+      t1.setPriority(Thread.MIN_PRIORITY);
       t1.setPriority(1);
-      System.out.println("t1 ki priority = "+t1.getPriority());
+//      System.out.println("t1 ki priority = "+t1.getPriority());
       t1.start();
       t2.start();
       for (int i=0;i<5;i++)
       {
          System.out.println(Thread.currentThread());
+
       }
    }
 }

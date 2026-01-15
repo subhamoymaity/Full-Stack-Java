@@ -13,6 +13,8 @@ class MyThread implements Runnable
 }
 public class ThreadDemo2 {
    public static void main(String[] args) {
+//      MyThread r =new MyThread();
+
       Thread t=new Thread(new MyThread());
       t.setName("genie");
       t.start();
