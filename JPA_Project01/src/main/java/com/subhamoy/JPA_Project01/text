@@ -5,3 +5,164 @@ public interface StudentRepo extends JpaRepository<Student,Integer>
 
 ans-  we knoe Jpa is a interface . JpaRepository it gives the implementation of
       Student class in runtime
+
+
+1️⃣ Your understanding (in simple words)
+
+👉 POSTMapping
+
+Data comes from client (Postman)
+JSON → converted to Java Object
+Saved in server database
+Response sent back to client
+
+👉 GETMapping
+
+Data is read from database
+Returned to client (Postman)
+So your sentence is correct 👇
+When data comes from client using Postman, @PostMapping creates/saves it on the server, and @GetMapping reads and returns it to the client.
+
+2️⃣ Request flow using YOUR example
+POST request
+Postman
+  ↓  (JSON)
+@PostMapping("/save")
+  ↓
+Student object
+  ↓
+Service → Repository → Database
+
+
+GET request
+Postman
+  ↓
+@GetMapping("/all")
+  ↓
+Service → Repository → Database
+  ↓
+List<Student> → JSON → Postman
+
+3️⃣ Explanation of YOUR APIs
+🔹 1st API – Save Student
+@PostMapping("/save")
+private Student createStudent(@RequestBody Student student){
+    return service.saveStudent(student);
+}
+
+
+✔ @PostMapping → create/save data
+✔ @RequestBody → JSON → Java object
+✔ Data saved in DB
+
+🔹 2nd API – Get All Students
+@GetMapping("/all")
+public List<Student> getAllStudents(){
+    return service.getAllStudentData();
+}
+
+
+✔ @GetMapping → read data
+✔ Returns list of students
+✔ Automatically converted to JSON
+
+🔹 3rd API – Get Student by ID (RequestParam)
+@GetMapping
+public Student getStudentById(@RequestParam Integer id) {
+    return service.getStudentById(id);
+}
+
+
+URL:
+
+GET /api/std?id=5
+
+
+✔ @RequestParam → reads query parameter
+✔ Used for filtering/searching
+
+🔹 4th API – Update Student
+@PutMapping("/{id}")
+public Student updateStudent(@PathVariable Integer id,@RequestBody Student student) {
+    return service.updateStudent(id, student);
+}
+
+
+✔ @PutMapping → update existing data
+✔ @PathVariable → reads value from URL
+✔ @RequestBody → updated data from client
+
+4️⃣ ALL annotations used (IMPORTANT)
+🔸 @RestController
+
+Marks class as REST controller
+Returns JSON, not view
+
+🔸 @RequestMapping("api/std")
+Base URL for all APIs
+
+/api/std/save
+/api/std/all
+
+🔸 @Autowired
+Injects dependency automatically
+Used for Service / Repository
+
+🔸 @PostMapping
+Handles POST HTTP requests
+Used to create/save data
+
+🔸 @GetMapping
+Handles GET HTTP requests
+Used to read/fetch data
+
+🔸 @PutMapping
+Handles PUT HTTP requests
+Used to update data
+
+🔸 @RequestBody
+Converts JSON → Java object
+Uses Jackson internally
+
+🔸 @PathVariable
+Reads value from URL path
+Example:
+
+/api/std/10
+
+🔸 @RequestParam
+Reads value from query string
+Example:
+/api/std?id=10
+
+5️⃣ Interview-ready one-liner ⭐
+In Spring Boot, @PostMapping is used to accept data from the client and save it on the server, while @GetMapping is used to read data from the server and return it to the client.
+
+6️⃣ What you can add next (Homework part)
+@DeleteMapping("/{id}")
+public void deleteStudent(@PathVariable Integer id) {
+    service.deleteStudent(id);
+}
+
+@PatchMapping("/{id}")
+public Student updatePartial(@PathVariable Integer id,@RequestBody Student student) {
+    return service.updatePartialStudent(id, student);
+}
+
+✅ What is Jackson? (in short)
+Jackson is a Java library used by Spring Boot to convert JSON ↔ Java objects automatically.
+
+🔁 What Jackson does
+JSON → Java Object (Deserialization)
+Java Object → JSON (Serialization)
+
+📌 Example
+{ "name": "Rahul", "age": 21 }
+⬇
+
+Student student;
+Jackson does this conversion automatically when you use:
+
+@RequestBody
+@ResponseBody
+@RestController
