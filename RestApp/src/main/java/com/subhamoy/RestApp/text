@@ -1,0 +1,13 @@
+@RequestMapping, @GetMapping  , @postMapping is the functionality of rest api  with spring boot
+
+Actually we are designing  rest api with Spring boot .
+
+@getMapping do serialization and also  maps the method with http(Postman) get method .
+serialization  is done by SpringBoot.
+
+
+@RequestBody tells that take Json data and converts it in java object (deserialization) ,
+and the Json will come by @postMapping   annotation
+
+ @postMapping maps the method with http post method
+

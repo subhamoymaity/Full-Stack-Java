@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define beans here -->
+    <bean id="petrol" class="org.example.PetrolEngine"/>
+    <bean id="diesel" class="org.example.DieselEngine"/>
+<!--    <bean id="diesel" class="org.example.DieselEngine" autowire-candidate="false"/>-->
+    <bean id="car" class="org.example.Car" scope="prototype">
+        <property name="engine" ref="petrol"/>
+<!--        <constructor-arg ref="petrol"/>  if use Constructor Injection-->
+<!--        Use annotations only  if use field injection   @Autowired)  in Car class Over (IEngine engine;) line  & @Component over Car class-->
+<!--        <bean id="car" class="org.example.Car" autowire="byName"/>
+            <bean id="car" class="org.example.Car" autowire="constructor"/>
+        // if case of autowire  and pass id="engine"  in petrolEngine . then reference variable of  target class(Car) = engine is same it will work
+        -->
+
+    </bean>
+</beans>
+
+
+<!--        🔥 Internally, Spring is doing:-->
+<!--        Car car = new Car();-->
+<!--        PetrolEngine engine = new PetrolEngine();-->
+<!--        car.setEngine(engine);-->

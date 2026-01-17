@@ -1,0 +1,5 @@
+com\subhamoy\configparser\util\ConfigParserUtil.class
+com\subhamoy\configparser\ConfigParserApplication.class
+com\subhamoy\configparser\service\ConfigService.class
+com\subhamoy\configparser\dto\ConfigDTO.class
+com\subhamoy\configparser\controller\ConfigController.class
