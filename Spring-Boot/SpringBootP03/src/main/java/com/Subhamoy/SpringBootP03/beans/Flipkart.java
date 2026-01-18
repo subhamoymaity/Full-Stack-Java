@@ -9,7 +9,9 @@ import org.springframework.stereotype.Component;
 public class Flipkart {
 
    @Autowired
+//   @Autowired: Spring will inject a bean of type Patners into the pat field.
    @Qualifier("jusPay")
+//   This qualifies the specific implementation to use.
    Patners pat;
 
    @Value("${jdbc.url}")
