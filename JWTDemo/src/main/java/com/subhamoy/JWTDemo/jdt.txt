@@ -1,0 +1,86 @@
+1️⃣ Normal Spring Security (Session-Based)
+
+Flow:
+
+User → Login (username + password)
+        ↓
+Authentication → Session created on server
+        ↓
+Server stores session ID
+        ↓
+Client gets session ID (cookie)
+        ↓
+Client sends cookie with every API call
+        ↓
+Server checks session → allows access
+
+
+Key Points:
+
+Server stores session for each user
+Stateful → server memory used
+Cookie is auto sent by browser
+Works well for server-rendered apps (JSP, Thymeleaf)
+Scaling is harder → need session replication for multiple servers
+
+2️⃣ JWT-Based Security (Token-Based)
+
+Flow:
+
+User → Login (username + password)
+        ↓
+Authentication → JWT generated
+        ↓
+Server sends JWT to client
+        ↓
+Client stores JWT (localStorage / header)
+        ↓
+Client sends JWT with every API request
+        ↓
+Server validates JWT → allows access
+
+
+Key Points:
+
+Server does NOT store session
+Stateless → highly scalable
+JWT contains user info + expiry + signature
+Works well for REST APIs, React, Mobile apps
+Token must be sent manually in Authorization header
+
+4️⃣ Simple Analogy
+
+Normal Security → Hotel key card issued at front desk, hotel keeps record
+JWT → Prepaid pass with your info embedded, hotel doesn’t need to keep record, just verify pass
+
+5️⃣ One-line Interview Answer
+
+Normal security is stateful with server sessions; JWT is stateless, scalable,
+and the token itself proves authentication and authorization.
+
+
+
+
+🔐 JWT Structure (Very Short)
+
+JWT = 3 parts separated by dots (.)
+HEADER . PAYLOAD . SIGNATURE
+
+1️⃣ Header – algorithm + token type
+{ "alg": "HS256", "typ": "JWT" }
+
+2️⃣ Payload – user data + expiry
+{ "username": "user", "role": "USER", "exp": 1700000000 }
+
+3️⃣ Signature – verifies token is not tampered
+HMAC(header + payload, secret key)
+
+
+
+
+
+
+
+
+
+
