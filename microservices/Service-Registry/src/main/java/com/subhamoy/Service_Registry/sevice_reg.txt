@@ -1,0 +1,21 @@
+all will come and registry them here
+
+Why we write
+
+eureka.client.register-with-eureka=false
+(in Service Registry application.properties)
+👉 Very short:
+Because the Service Registry (Eureka Server) should NOT register itself as a client.
+
+
+
+Service Registry (Eureka Server) – Work (Very short)
+
+Acts like a phone directory for microservices
+Other services register themselves here
+Stores service name + IP + port
+Helps services find and talk to each other without hard-coding URLs
+
+In one line
+register-with-eureka=false → “I am the registry, not a client.”
+Service Registry → “I keep track of all microservices.”
