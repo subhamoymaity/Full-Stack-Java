@@ -3,6 +3,7 @@ package com.subhamoy.hotstar.config;
 import com.subhamoy.hotstar.service.AuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -22,7 +23,8 @@ public class SecurityConfig {
    private final JwtAuthenticationFilter jwtAuthFilter;
    private final AuthService authService;
 
-   public SecurityConfig(JwtAuthenticationFilter jwtAuthFilter, AuthService authService) {
+   // ✅ Add @Lazy here to break the circular dependency
+   public SecurityConfig(@Lazy JwtAuthenticationFilter jwtAuthFilter, AuthService authService) {
       this.jwtAuthFilter = jwtAuthFilter;
       this.authService = authService;
    }
@@ -46,8 +48,6 @@ public class SecurityConfig {
 
    @Bean
    public AuthenticationProvider authenticationProvider() {
-      // ✅ UPDATED FOR SPRING SECURITY 7.x (Spring Boot 4.x)
-      // Constructor now requires UserDetailsService as parameter
       DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(authService);
       authProvider.setPasswordEncoder(passwordEncoder());
       return authProvider;
