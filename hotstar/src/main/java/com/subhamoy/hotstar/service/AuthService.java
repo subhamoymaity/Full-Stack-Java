@@ -21,7 +21,7 @@ public class AuthService implements UserDetailsService {
    private final JwtService jwtService;
    private final AuthenticationManager authenticationManager;
 
-   // ✅ Add @Lazy to AuthenticationManager
+   // ✅ Add @Lazy ONLY to AuthenticationManager
    public AuthService(UserRepository userRepository,
                       PasswordEncoder passwordEncoder,
                       JwtService jwtService,

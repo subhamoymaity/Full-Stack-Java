@@ -11,5 +11,4 @@ public class MovieDto {
    private String category;
    private String youtubeUrl;
    private String description;
-
 }
