@@ -28,6 +28,7 @@ public class SecurityConfig {
              .csrf(csrf -> csrf.disable())
              .authorizeHttpRequests(auth -> auth
                                                    .requestMatchers("/api/auth/**", "/api/movies/**").permitAll()
+                                                   .requestMatchers("/api/watchlist/**").authenticated()            // ← Protected watchlist
                                                    .anyRequest().authenticated()
              )
              .sessionManagement(session -> session
