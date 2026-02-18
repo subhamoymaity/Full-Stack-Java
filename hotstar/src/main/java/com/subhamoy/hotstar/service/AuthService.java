@@ -3,6 +3,7 @@ package com.subhamoy.hotstar.service;
 import com.subhamoy.hotstar.dto.AuthResponse;
 import com.subhamoy.hotstar.dto.LoginRequest;
 import com.subhamoy.hotstar.dto.RegisterRequest;
+import com.subhamoy.hotstar.exception.EmailAlreadyExistsException;
 import com.subhamoy.hotstar.model.User;
 import com.subhamoy.hotstar.repository.UserRepository;
 import org.springframework.context.annotation.Lazy;
@@ -21,7 +22,7 @@ public class AuthService implements UserDetailsService {
    private final JwtService jwtService;
    private final AuthenticationManager authenticationManager;
 
-   // ✅ @Lazy on AuthenticationManager
+   // ✅ @Lazy on AuthenticationManager to avoid circular dependency
    public AuthService(UserRepository userRepository,
                       PasswordEncoder passwordEncoder,
                       JwtService jwtService,
@@ -34,7 +35,7 @@ public class AuthService implements UserDetailsService {
 
    public AuthResponse register(RegisterRequest request) {
       if (userRepository.existsByEmail(request.getEmail())) {
-         throw new RuntimeException("Email already exists");
+         throw new EmailAlreadyExistsException("Email already exists: " + request.getEmail());
       }
 
       User user = new User();
