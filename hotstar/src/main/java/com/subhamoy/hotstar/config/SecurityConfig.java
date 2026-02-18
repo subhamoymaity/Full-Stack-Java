@@ -1,8 +1,11 @@
 package com.subhamoy.hotstar.config;
 
+import com.subhamoy.hotstar.service.AuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -17,38 +20,46 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
    private final JwtAuthenticationFilter jwtAuthFilter;
+   private final AuthService authService;
 
-   public SecurityConfig(JwtAuthenticationFilter jwtAuthFilter) {
+   public SecurityConfig(JwtAuthenticationFilter jwtAuthFilter, AuthService authService) {
       this.jwtAuthFilter = jwtAuthFilter;
+      this.authService = authService;
    }
 
    @Bean
    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
       http
              .csrf(csrf -> csrf.disable())
-             .cors(cors -> {})
              .authorizeHttpRequests(auth -> auth
-                                                   .requestMatchers("/api/auth/**", "/api/movies/all", "/h2-console/**").permitAll()
+                                                   .requestMatchers("/api/auth/**", "/api/movies/**").permitAll()
                                                    .anyRequest().authenticated()
              )
              .sessionManagement(session -> session
                                                   .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
              )
+             .authenticationProvider(authenticationProvider())
              .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-      // For H2 Console
-      http.headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()));
 
       return http.build();
    }
 
    @Bean
-   public PasswordEncoder passwordEncoder() {
-      return new BCryptPasswordEncoder();
+   public AuthenticationProvider authenticationProvider() {
+      // ✅ UPDATED FOR SPRING SECURITY 7.x (Spring Boot 4.x)
+      // Constructor now requires UserDetailsService as parameter
+      DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider(authService);
+      authProvider.setPasswordEncoder(passwordEncoder());
+      return authProvider;
    }
 
    @Bean
    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
       return config.getAuthenticationManager();
+   }
+
+   @Bean
+   public PasswordEncoder passwordEncoder() {
+      return new BCryptPasswordEncoder();
    }
 }
