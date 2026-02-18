@@ -1,0 +1,9 @@
+run in browser
+
+1st-  http://localhost:8761/
+2nd-  http://localhost:1111/admin/applications
+3rd-  http://localhost:8081/greet
+      output- Good Morning 8081,
+
+4th-  http://localhost:8082/welcome
+      output- Good Morning 8081,CodeforSuccess
