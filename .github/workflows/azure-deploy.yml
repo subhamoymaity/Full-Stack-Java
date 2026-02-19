@@ -32,4 +32,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: hotstar-backend-01
-          package: target/*.jar
+          package: hotstar/target/*.jar
