@@ -10,6 +10,6 @@ public class QuizApplication {
       SpringApplication.run(QuizApplication.class, args);
    }
 
-
-
 }
+
+// make changes / add other properties
