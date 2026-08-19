@@ -105,3 +105,48 @@ Benefit	Explanation
 📈 Scalability	Scale each part independently
 🎓 Resume Impact	Shows you know multiple platforms (bonus points!)
 
+
+
+For running it -
+
+Yes, on this page.
+Do not edit the current HotstarApplication item under Application.
+1. Click the + icon at the top-left of this window, above the left-side list.
+2. Select    Maven   from the list.
+3. A new Maven configuration will open.
+4. Enter:
+Name: Hotstar Maven Run
+Working directory: D:\Full-Stack-Java\hotstar
+Command line: spring-boot:run
+5. In its Environment variables field, enter:
+TEMP=C:\javatmp;TMP=C:\javatmp;JAVA_TOOL_OPTIONS=-Djdk.net.unixdomain.tmpdir=C:\javatmp
+
+/*
+They only tell Java where to create temporary internal files. They do not change your source code, database, API, or dependencies.
+You do not need them for every project. Add them only if a project shows this error:
+Unable to establish loopback connection
+Invalid argument: connect
+*/
+
+
+6. Click Apply, then OK.
+7. In IntelliJ’s top-right run dropdown, choose Hotstar Maven Run.
+8. Click the green ▶ button.
+
+
+if i have to select maven when i running spring boot application ,
+ application  not working why
+
+Normally, no—you can run a Spring Boot app using an Application configuration.
+In your IntelliJ installation, the Application configuration fails before Spring Boot starts because IntelliJ’s internal build server throws:
+
+BuiltInServerManagerImpl.createServerBootstrap
+BuildManager.startListening
+NullPointerException
+
+That is an IntelliJ problem, not a Spring Boot or project problem.
+Maven works because it starts the app through:
+
+mvn spring-boot:run
+
+Maven compiles and runs your project using pom.xml, bypassing IntelliJ’s broken Application build process.

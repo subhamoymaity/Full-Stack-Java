@@ -1,0 +1,123 @@
+Maven notes
+What is Maven?
+Maven is a Java project build tool.
+It helps Java projects:
+- Download libraries
+- Compile Java code
+- Run tests
+- Create a .jar file
+- Run Spring Boot applications
+Your project uses Maven because it contains:
+pom.xml
+What is pom.xml?
+pom.xml is Maven’s project configuration file.
+It contains:
+Project name: hotstar-backend
+Java version: 21
+Dependencies: Spring Boot, MySQL, JPA, Security, JWT
+Maven reads pom.xml and downloads required libraries automatically.
+Why do we need Maven?
+Without Maven, you would need to download every .jar file manually, add it to the project, and manage compatible versions.
+Maven does this automatically.
+pom.xml
+   ↓
+Maven downloads dependencies
+   ↓
+Maven compiles Java code
+   ↓
+Maven runs the Spring Boot app
+Important Maven commands
+.\mvnw.cmd clean
+Deletes old build files in the target folder.
+.\mvnw.cmd compile
+Compiles Java files.
+.\mvnw.cmd test
+Runs test classes.
+.\mvnw.cmd package
+Creates a JAR file in the target folder.
+.\mvnw.cmd clean install
+Deletes old files, compiles, tests, creates the JAR, and installs it locally.
+.\mvnw.cmd spring-boot:run
+Runs your Spring Boot backend.
+What is Maven Wrapper?
+Your project has:
+mvnw
+mvnw.cmd
+This is Maven Wrapper.
+Use this on Windows:
+.\mvnw.cmd spring-boot:run
+It ensures the project uses the correct Maven version, even if Maven is not installed globally.
+Maven vs Spring Boot
+Maven       = builds, downloads, and runs the project
+Spring Boot = framework used to create the backend/API
+Maven starts Spring Boot with:
+spring-boot:run
+Maven vs IntelliJ Application run
+Application configuration
+→ IntelliJ compiles and runs HotstarApplication.java
+
+Maven configuration
+→ Maven reads pom.xml and runs spring-boot:run
+Normally both work.
+On your computer, IntelliJ’s Application configuration has an internal NPE, so Maven is working better because it bypasses IntelliJ’s failing build server.
+Do all Java projects use Maven?
+No. Common Java build tools are:
+Maven   → pom.xml
+Gradle  → build.gradle or build.gradle.kts
+Ant     → build.xml
+Use Maven when the project has pom.xml.
+Do frontend projects use Maven?
+Usually no.
+Your React frontend uses:
+package.json
+npm install
+npm run dev
+Your backend uses:
+pom.xml
+.\mvnw.cmd spring-boot:run
+When should I use clean install?
+Use it when:
+- You changed dependencies in pom.xml
+- You get strange old-build errors
+- You want to verify that the full project builds
+For normal development, use:
+.\mvnw.cmd spring-boot:run
+Where is the built JAR?
+After clean install or package:
+D:\Full-Stack-Java\hotstar\target\hotstar-0.0.1-SNAPSHOT.jar
+You can run it with:
+java -jar target\hotstar-0.0.1-SNAPSHOT.jar
+
+
+3:15 PM
+
+
+
+
+
+
+
+
+what is jar in sort
+
+
+
+
+
+
+
+3:20 PM
+
+
+
+
+
+
+A JAR is a Java application file.
+JAR = Java Archive
+It packages your compiled Java code, configuration, and required libraries into one file.
+For your project:
+target\hotstar-0.0.1-SNAPSHOT.jar
+You can run it without IntelliJ:
+java -jar target\hotstar-0.0.1-SNAPSHOT.jar
+For Spring Boot, the JAR starts your backend server.
